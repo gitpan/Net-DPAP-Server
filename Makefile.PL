@@ -2,18 +2,19 @@
 use ExtUtils::MakeMaker;
 WriteMakefile
 (
+          'PL_FILES' => {},
+          'INSTALLDIRS' => 'site',
           'NAME' => 'Net::DPAP::Server',
           'VERSION_FROM' => 'lib/Net/DPAP/Server.pm',
           'PREREQ_PM' => {
-                           'Class::Accessor' => '0',
-                           'File::Find::Rule' => '0',
-                           'Image::Imlib2' => '0',
-                           'Image::Info' => '0',
-                           'Net::DMAP::Server' => '0',
-                           'Perl6::Slurp' => '0',
-                           'Test::More' => '0'
-                         },
-          'INSTALLDIRS' => 'site',
-          'PL_FILES' => {}
+                           'Perl6::Slurp' => 0,
+                           'Image::Info' => 0,
+                           'File::Find::Rule' => 0,
+                           'Net::DPAP::Client' => 0,
+                           'Class::Accessor' => 0,
+                           'Test::More' => 0,
+                           'Net::DMAP::Server' => 0,
+                           'Image::Imlib2' => 0
+                         }
         )
 ;

@@ -19,7 +19,7 @@ sub new_from_file {
     my $class = shift;
     my $file = shift;
     my $self = $class->new({ file => $file });
-    print "Adding $file\n";
+    #print "Adding $file\n";
 
     my @stat = stat $file;
     my $info = Image::Info::image_info( $file );
@@ -41,7 +41,6 @@ sub dpap_hires {
     my $self = shift;
     scalar slurp $self->file;
 }
-
 
 sub dpap_thumb {
     my $self = shift;
