@@ -1,0 +1,24 @@
+--- #YAML:1.0
+name: Net-DPAP-Server
+version: 0.01
+author:
+  - Richard Clamp <richardc@unixbeard.net>
+abstract: Provide a DPAP Server
+license: perl
+requires:
+  Class::Accessor: 0
+  File::Find::Rule: 0
+  Image::Imlib2: 0
+  Image::Info: 0
+  Net::DMAP::Server: 0
+  Perl6::Slurp: 0
+  perl: 5.006
+build_requires:
+  Test::More: 0
+provides:
+  Net::DPAP::Server:
+    file: lib/Net/DPAP/Server.pm
+    version: 0.01
+  Net::DPAP::Server::Image:
+    file: lib/Net/DPAP/Server/Image.pm
+generated_by: Module::Build version 0.25
